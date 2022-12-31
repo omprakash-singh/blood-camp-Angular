@@ -1,0 +1,26 @@
+<section>
+     <form class="card" #authForm="ngForm" (ngSubmit)="onCreateUser(authForm)">
+
+          <h1 class="text-light text-center mb-4 auth-b">Register</h1>
+          <div *ngIf="error" class="alert alert-danger text-center" role="alert">
+               User already Register!
+          </div>
+          <mat-form-field class="example-full-width">
+               <mat-label>Email</mat-label>
+               <input type="email" ngModel name="email" matInput placeholder="Ex. pat@example.com" required email>
+          </mat-form-field>
+          <mat-form-field class="example-full-width">
+               <mat-label>Name</mat-label>
+               <input matInput placeholder="Ex. om singh" ngModel name="name" required>
+          </mat-form-field>
+          <mat-form-field appearance="fill">
+               <mat-label>Enter your password</mat-label>
+               <input ngModel matInput name="password" type="password" required minlength="6" />
+          </mat-form-field>
+
+          <button type="submit" mat-raised-button color="primary" [disabled]="!authForm.valid">Register</button>
+          <div class="mt-3">
+               <a href="/auth/login" class="text-light  mt-3">login account!</a>
+          </div>
+     </form>
+</section>

@@ -1,0 +1,21 @@
+<section>
+
+     <form class="card" #authlogin="ngForm" (ngSubmit)="onLoginUser(authlogin)">
+          <h1 class="text-light text-center mb-4 auth-b">Login</h1>
+          <div *ngIf="error" class="alert alert-danger text-center" role="alert">
+               Email and password incorrect!!
+          </div>
+          <mat-form-field class="example-full-width">
+               <mat-label>Email</mat-label>
+               <input type="email" ngModel name="email" matInput placeholder="Ex. pat@example.com" required email>
+          </mat-form-field>
+          <mat-form-field appearance="fill">
+               <mat-label>Enter your password</mat-label>
+               <input matInput ngModel name="password" type="password" minlength="6" required />
+          </mat-form-field>
+          <button type="submit" [disabled]="!authlogin.valid" mat-raised-button color="primary">Login</button>
+          <div class="login-footer mt-3">
+               <a href='/auth/register' class="text-light mt-3">Create new account!</a>
+          </div>
+     </form>
+</section>

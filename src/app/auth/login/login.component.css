@@ -1,0 +1,31 @@
+section {
+     width: 100%;
+     height: 100vh;
+     background-image: url(../../../assets/Blood-Donation.jpg);
+     background-repeat: no-repeat;
+     background-position: center;
+     background-size: cover;
+}
+.card {
+     width: 500px;
+     position: absolute;
+     top: 50%;
+     left: 50%;
+     transform: translate(-50%, -50%);
+     padding: 30px;
+     background-color: rgba(0,0,0, 0.3)
+}
+.login-footer {
+     display: flex;
+     align-items: center;
+     justify-content: space-between;
+}
+.auth-b {
+     text-transform: uppercase;
+     letter-spacing: 2px;
+     font-weight: 600;
+     font-size: 28px;
+}
+.error {
+     font-size: 12px;
+}
